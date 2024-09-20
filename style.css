@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
+    color: #121826;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    background: url("./assets/sand-background-image@2x.png") top / 50% no-repeat, #F8FAFC;
+    padding: 0 32.5%;
+    height: 196px;
+    text-align: center;
+    border-bottom: 1px solid rgba(77, 85, 98, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header h1 {
+    margin-bottom: 1rem;
+}
+
+.header p {
+    color: #4D5562;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 220px repeat(3, 1fr);
+    margin: 60px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    padding-top: 24px;
+    overflow: hidden;
+}
+
+.col-features {
+    background-color: #FFFFFF;
+    padding-top: 209px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    height: 52px;
+    color: #121826;
+    font-weight: 600;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.col-features .cell {
+    background-color: #F8FAFC;
+}
+
+.col-plan .cell {
+    justify-content: center;
+    padding-left: 0px;
+    font-weight: 550;
+}
+
+.header_column_price {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.header_column_price strong {
+    color: #3662E3;
+}
+
+.header_column_price .pill {
+    color: #FFFFFF;
+}
+
+.header_column_price p {
+    font-size: 64px;
+    font-weight: 600;
+    margin: 0.25rem 0;
+}
+
+.header_column_price span {
+    color: #4D5562;
+}
+
+.get_started {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    font-weight: 500;
+    color: #3662E3;
+}
+
+.popular {
+    background-color: #121826;
+    color: white;
+}
+
+.popular .header_column_price strong {
+    background: #3662E3;
+    border-radius: 25px;
+    padding: 2px 12px;
+}
+
+.popular .header_column_price p,
+.popular .header_column_price span {
+    color: white;
+}
+
+.popular .get_started {
+    background-color: #E9A23B;
+    color: white;
+}
+
+.white_text {
+    color: #FFFFFF;
+    border-bottom: 0.02px solid #1d2125;
+}
+
+/* Media query para pantallas medianas (hasta 1024px) */
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 0 28%;
+    }
+
+    .container section:nth-of-type(2) {
+        visibility: hidden;
+    }
+
+    .container section:nth-of-type(3) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .container section:nth-of-type(4) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .container section:nth-of-type(5) {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+
+/* Media query para pantallas pequeñas (hasta 640px) */
+@media screen and (max-width: 640px) {
+    .header {
+        padding: 0 15%;
+    }
+
+    .container {
+        grid-template-columns: 120px 210px 210px;
+    }
+
+    .container section:nth-of-type(2) {
+        visibility: hidden;
+    }
+
+    .container section:nth-of-type(3) {
+        visibility: hidden;
+    }
+
+    .container section:nth-of-type(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .container section:nth-of-type(4) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .container section:nth-of-type(5) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .col-features .cell {
+        display: block; /* Asegura que el div se comporte como bloque */
+        width: 120px; /* Ajusta el ancho para obligar al texto a cortarse */
+        white-space: nowrap; /* Evita que el texto se ajuste a otra línea */
+        overflow: hidden; /* Oculta el texto desbordante */
+        text-overflow: ellipsis; /* Muestra "..." en caso de corte */
+        vertical-align: middle;
+        line-height: 42px;
+        padding: 5px; /* Ajusta el espaciado interno si es necesario */
+        box-sizing: border-box; /* Incluye padding en el ancho total */
+    }
+}
