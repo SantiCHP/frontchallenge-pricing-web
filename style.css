@@ -39,7 +39,7 @@ a {
 
 .container {
     display: grid;
-    grid-template-columns: 220px repeat(3, 1fr);
+    grid-template-columns: 220px repeat(4, 1fr);
     margin: 60px;
 }
 
